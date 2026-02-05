@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shravan Thorat - Portfolio</title>
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              background: 'hsl(222.2 84% 4.9%)',
+              foreground: 'hsl(210 40% 98%)',
+              primary: 'hsl(188 100% 50%)',
+              muted: 'hsl(217.2 32.6% 17.5%)',
+              'muted-foreground': 'hsl(215 20.2% 65.1%)',
+              cyan: {
+                400: '#22d3ee',
+                500: '#06b6d4',
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-background text-foreground antialiased">
+    
+    <!-- Header/Navigation -->
+    <header class="sticky top-0 z-50 glass-effect border-b border-white/10">
+        <div class="container mx-auto px-4 py-4 md:py-6 flex items-center justify-between">
+            <div class="flex-1">
+                <a href="index.html" class="text-2xl md:text-3xl font-bold gradient-text hover:opacity-80 transition-opacity">
+                    Shravan Thorat
+                </a>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex gap-6 md:gap-8 items-center">
+                <a href="index.html" class="text-sm font-medium text-white hover:text-cyan-400 transition-colors duration-300">Home</a>
+                <a href="#" class="text-sm font-medium text-white hover:text-cyan-400 transition-colors duration-300">About</a>
+                <a href="#" class="text-sm font-medium text-white hover:text-cyan-400 transition-colors duration-300">Education</a>
+                <a href="#" class="text-sm font-medium text-white hover:text-cyan-400 transition-colors duration-300">Skills</a>
+                <a href="contact.html" class="text-sm font-medium text-white hover:text-cyan-400 transition-colors duration-300">Contact</a>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <nav id="mobile-menu" class="md:hidden bg-slate-900/90 backdrop-blur-md">
+            <div class="flex flex-col p-4 gap-4 text-center">
+                <a href="index.html" class="block py-2 text-white hover:text-cyan-400 transition-colors">Home</a>
+                <a href="#" class="block py-2 text-white hover:text-cyan-400 transition-colors">About</a>
+                <a href="contact.html" class="block py-2 text-white hover:text-cyan-400 transition-colors">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow">
+        <!-- Hero Section -->
+        <section class="min-h-screen flex items-center justify-center pt-20 pb-20 md:pb-0">
+            <div class="container mx-auto px-4 py-10 md:py-20">
+                <div class="max-w-4xl mx-auto text-center">
+                    <!-- Avatar -->
+                    <div class="flex justify-center mb-8 md:mb-12 animate-fade-in-down">
+                        <div class="relative w-32 h-32 md:w-40 md:h-40 animate-float">
+                            <div class="absolute inset-0 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full opacity-75 blur-xl animate-glow"></div>
+                            <div class="relative w-full h-full bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full flex items-center justify-center shadow-2xl border-2 border-cyan-300/30">
+                                <div class="text-6xl md:text-8xl">👨‍🎓</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Heading -->
+                    <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 md:mb-8 animate-fade-in-up leading-tight">
+                        Hi, I'm <span class="gradient-text">Shravan Kiran Thorat</span>
+                    </h1>
+
+                    <!-- Subtitle -->
+                    <p class="text-lg md:text-2xl text-muted-foreground mb-8 md:mb-12 leading-relaxed max-w-2xl mx-auto animate-fade-in-up" style="animation-delay: 0.1s;">
+                        First Year B.Tech Mechanical Engineering Student at <span class="text-cyan-400 font-semibold">RIT Islampur</span>
+                    </p>
+
+                    <!-- Description -->
+                    <p class="text-base md:text-lg text-muted-foreground mb-8 md:mb-12 max-w-2xl mx-auto animate-fade-in-up" style="animation-delay: 0.2s;">
+                        Passionate about engineering, CAD design, robotics, and innovation. Exploring the intersection of mechanics and modern technology.
+                    </p>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up" style="animation-delay: 0.3s;">
+                        <a href="contact.html" class="button-glow px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold rounded-lg text-lg inline-block text-center">
+                            Get in Touch
+                        </a>
+                        <a href="#" class="button-glow px-8 py-4 glass-effect text-cyan-400 font-bold rounded-lg text-lg border-2 border-cyan-400/50 inline-block text-center">
+                            Learn More
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Info Section -->
+        <section class="section-container">
+            <div class="container mx-auto px-4">
+                <div class="max-w-5xl mx-auto">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-12 md:mb-16 text-center">
+                        Quick Overview
+                    </h2>
+                    <div class="grid md:grid-cols-3 gap-6 md:gap-8">
+                        <div class="card-glass group">
+                            <div class="text-4xl mb-4 transform group-hover:scale-110 transition-transform duration-300">
+                                🎓
+                            </div>
+                            <h3 class="text-xl font-bold text-cyan-400 mb-3">Education</h3>
+                            <p class="text-muted-foreground leading-relaxed">
+                                FY B.Tech in Mechanical Engineering at RIT College, Islampur
+                            </p>
+                        </div>
+
+                        <div class="card-glass group">
+                            <div class="text-4xl mb-4 transform group-hover:scale-110 transition-transform duration-300">
+                                ⚙️
+                            </div>
+                            <h3 class="text-xl font-bold text-cyan-400 mb-3">Interests</h3>
+                            <p class="text-muted-foreground leading-relaxed">
+                                CAD Design, Robotics, Automotive Engineering, and Mechanics
+                            </p>
+                        </div>
+
+                        <div class="card-glass group">
+                            <div class="text-4xl mb-4 transform group-hover:scale-110 transition-transform duration-300">
+                                🚀
+                            </div>
+                            <h3 class="text-xl font-bold text-cyan-400 mb-3">Goal</h3>
+                            <p class="text-muted-foreground leading-relaxed">
+                                To become a skilled engineer and work on impactful projects
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="glass-effect border-t border-white/10 mt-20 md:mt-28">
+        <div class="container mx-auto px-4 py-12 text-center">
+            <p class="text-sm text-muted-foreground">
+                © 2026 Shravan Kiran Thorat | Portfolio Website
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
